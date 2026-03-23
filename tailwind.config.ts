@@ -18,8 +18,17 @@ export default {
 				'2xl': '1400px'
 			}
 		},
+		fontFamily: {
+			oswald: ['Oswald', 'sans-serif'],
+			ibm: ['IBM Plex Sans', 'sans-serif'],
+		},
 		extend: {
 			colors: {
+				neon: {
+					green: '#00ffb3',
+					magenta: '#ff00ff',
+					cyan: '#00e5ff',
+				},
 				border: 'hsl(var(--border))',
 				input: 'hsl(var(--input))',
 				ring: 'hsl(var(--ring))',
