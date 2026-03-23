@@ -9,7 +9,6 @@ const NAV_LINKS = [
   { label: 'Мероприятия', href: '#events' },
   { label: 'Галерея', href: '#gallery' },
   { label: 'О нас', href: '#about' },
-  { label: 'Партнёры', href: '#partners' },
   { label: 'Контакты', href: '#contacts' },
 ];
 
@@ -29,14 +28,6 @@ const EVENTS = [
 
 const GALLERY_URL = 'https://itsxot.ru/disk/15-03-2026-balenci-scary-night-0zr83s';
 
-const PARTNERS = [
-  { name: 'Лофт Парк Подземка', type: 'Площадка' },
-  { name: 'Dark Matter Bar', type: 'Площадка' },
-  { name: 'Noise Records', type: 'Лейбл' },
-  { name: 'Underground NSK', type: 'Медиа' },
-  { name: 'Neon Studio', type: 'Свет и звук' },
-  { name: 'Raw Crew', type: 'Команда' },
-];
 
 function useVisible(threshold = 0.12) {
   const ref = useRef<HTMLElement>(null);
@@ -147,7 +138,7 @@ export default function Index() {
           {/* CTA */}
           <div className="animate-fade-up delay-3 flex flex-col sm:flex-row items-center gap-4 mt-12">
             <button className="btn-primary" onClick={() => go('#events')}>Ближайшие события</button>
-            <button className="btn-outline" onClick={() => go('#contacts')}>Стать партнёром</button>
+            <a href="https://t.me/BalenciManager" target="_blank" rel="noopener noreferrer" className="btn-outline">Сотрудничать</a>
           </div>
         </div>
 
@@ -296,42 +287,6 @@ export default function Index() {
               </div>
               <div className="absolute -bottom-5 -right-5 w-16 h-16" style={{ borderRight: '1px solid #2a2a2a', borderBottom: '1px solid #2a2a2a' }} />
               <div className="absolute -top-5 -left-5 w-16 h-16" style={{ borderLeft: '1px solid #2a2a2a', borderTop: '1px solid #2a2a2a' }} />
-            </div>
-          </Reveal>
-        </div>
-      </section>
-
-      {/* ── PARTNERS ── */}
-      <section id="partners" className="py-28 px-6 md:px-12">
-        <div className="max-w-5xl mx-auto">
-          <Reveal>
-            <p className="font-montserrat font-light text-[10px] tracking-[0.45em] uppercase mb-3" style={{ color: '#4a4a4a' }}>Экосистема</p>
-            <h2 className="font-cormorant font-light text-5xl md:text-6xl mb-16" style={{ color: '#ebebeb', letterSpacing: '0.08em' }}>
-              Партнёры
-            </h2>
-          </Reveal>
-
-          <div className="grid grid-cols-2 md:grid-cols-3 gap-2">
-            {PARTNERS.map((p, i) => (
-              <Reveal key={i} delay={i * 50}>
-                <div className="partner-item group cursor-pointer">
-                  <p className="font-montserrat font-light text-[9px] tracking-[0.35em] uppercase mb-3 transition-colors" style={{ color: '#2a2a2a' }}>
-                    {p.type}
-                  </p>
-                  <p className="font-cormorant font-light text-xl transition-colors" style={{ color: '#4a4a4a', letterSpacing: '0.05em' }}>
-                    {p.name}
-                  </p>
-                </div>
-              </Reveal>
-            ))}
-          </div>
-
-          <Reveal delay={200}>
-            <div className="mt-16 text-center">
-              <p className="font-cormorant italic text-lg mb-6" style={{ color: '#3a3a3a' }}>Хочешь стать частью BALENCI?</p>
-              <button className="btn-outline" onClick={() => document.querySelector('#contacts')?.scrollIntoView({ behavior: 'smooth' })}>
-                Обсудить сотрудничество
-              </button>
             </div>
           </Reveal>
         </div>
