@@ -19,8 +19,8 @@ export default {
 			}
 		},
 		fontFamily: {
-			oswald: ['Oswald', 'sans-serif'],
-			ibm: ['IBM Plex Sans', 'sans-serif'],
+			cormorant: ['Cormorant Garamond', 'serif'],
+			montserrat: ['Montserrat', 'sans-serif'],
 		},
 		extend: {
 			colors: {
