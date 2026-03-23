@@ -14,34 +14,14 @@ const NAV_LINKS = [
 
 const EVENTS = [
   {
-    date: '29 МАР',
-    title: 'BALENCI × METRO RAVE',
-    venue: 'Подземка, Новосибирск',
+    date: '3 МАЯ',
+    title: 'ТОКИО ПАТИ',
+    venue: 'Лофт Парк Подземка, Новосибирск',
     time: '23:00',
-    tag: 'RAVE',
-    description: 'Тёмные тоннели, бас, который ты чувствуешь кожей. Ограниченный вход.',
+    tag: 'PARTY',
+    description: 'Японская эстетика meets новосибирский андеграунд. Один вечер, одна атмосфера.',
     colorVar: 'var(--neon-green)',
     borderClass: 'border-[#00ffb3] text-[#00ffb3]',
-  },
-  {
-    date: '12 АПР',
-    title: 'AFTER HOURS VOL.4',
-    venue: 'Bar Dark Matter',
-    time: '22:00',
-    tag: 'BAR',
-    description: 'Четвёртый выпуск серии вечеринок в самом тёмном баре города.',
-    colorVar: 'var(--neon-magenta)',
-    borderClass: 'border-[#ff00ff] text-[#ff00ff]',
-  },
-  {
-    date: '26 АПР',
-    title: 'UNDERGROUND SESSIONS',
-    venue: 'Секретная локация',
-    time: '00:00',
-    tag: 'SECRET',
-    description: 'Локация раскрывается за 2 часа до начала. Только для своих.',
-    colorVar: 'var(--neon-cyan)',
-    borderClass: 'border-[#00e5ff] text-[#00e5ff]',
   },
 ];
 
