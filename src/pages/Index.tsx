@@ -23,56 +23,11 @@ const EVENTS = [
     time: '23:00',
     tag: 'PARTY',
     description: 'Японская эстетика встречает новосибирский андеграунд. Один вечер — одна атмосфера.',
-  },
-  {
-    date: '14 ИЮНЯ',
-    year: '2025',
-    title: 'NIGHT MARKET',
-    venue: 'Лофт Парк Подземка',
-    city: 'Новосибирск',
-    time: '21:00',
-    tag: 'MARKET',
-    description: 'Ночной рынок под землёй. Музыка, еда, арт — всё в одном пространстве.',
-  },
-  {
-    date: '19 ИЮЛЯ',
-    year: '2025',
-    title: 'SUMMER UNDERGROUND',
-    venue: 'Лофт Парк Подземка',
-    city: 'Новосибирск',
-    time: '22:00',
-    tag: 'RAVE',
-    description: 'Жара снаружи, холод и бас внутри. Летний андеграунд в самом тёмном месте города.',
-  },
-  {
-    date: '23 АВГУСТА',
-    year: '2025',
-    title: 'BALENCI × ЗАКРЫТАЯ',
-    venue: 'Лофт Парк Подземка',
-    city: 'Новосибирск',
-    time: '23:30',
-    tag: 'CLOSED',
-    description: 'Закрытая вечеринка только по приглашениям. Список гостей ограничен.',
-  },
-  {
-    date: '27 СЕНТЯБРЯ',
-    year: '2025',
-    title: 'ОСЕННИЙ СЕЗОН',
-    venue: 'Лофт Парк Подземка',
-    city: 'Новосибирск',
-    time: '22:00',
-    tag: 'SEASON',
-    description: 'Открытие осеннего сезона BALENCI. Новые резиденты, новая атмосфера.',
+    ticketUrl: 'https://bilet-tut.ru/event/635',
   },
 ];
 
-const GALLERY_ITEMS = [
-  { label: 'Токио Пати', sub: 'Май 2025', img: HERO_IMAGE, tall: true },
-  { label: 'Metro Rave', sub: 'Март 2025', img: null, tall: false },
-  { label: 'After Hours', sub: 'Февраль 2025', img: null, tall: false },
-  { label: 'Dark Session', sub: 'Январь 2025', img: null, tall: false },
-  { label: 'Underground', sub: 'Декабрь 2024', img: null, tall: false },
-];
+const GALLERY_URL = 'https://itsxot.ru/disk/15-03-2026-balenci-scary-night-0zr83s';
 
 const PARTNERS = [
   { name: 'Лофт Парк Подземка', type: 'Площадка' },
@@ -248,7 +203,17 @@ export default function Index() {
                   </div>
                 </div>
 
-                <button className="btn-outline flex-shrink-0 text-[10px]">Подробнее</button>
+                <a
+                  href={ev.ticketUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex-shrink-0 font-montserrat font-light text-[10px] tracking-[0.25em] uppercase px-8 py-3 transition-all duration-300"
+                  style={{ background: '#ebebeb', color: '#080808', border: '1px solid #ebebeb' }}
+                  onMouseEnter={e => { (e.currentTarget as HTMLAnchorElement).style.background = 'transparent'; (e.currentTarget as HTMLAnchorElement).style.color = '#ebebeb'; }}
+                  onMouseLeave={e => { (e.currentTarget as HTMLAnchorElement).style.background = '#ebebeb'; (e.currentTarget as HTMLAnchorElement).style.color = '#080808'; }}
+                >
+                  Купить билет
+                </a>
               </div>
             </Reveal>
           ))}
@@ -265,27 +230,31 @@ export default function Index() {
             </h2>
           </Reveal>
 
-          <div className="grid grid-cols-2 md:grid-cols-3 gap-2">
-            {GALLERY_ITEMS.map((item, i) => (
-              <Reveal key={i} delay={i * 60} className={item.tall ? 'md:row-span-2' : ''}>
-                <div className="gallery-item" style={{ height: item.tall ? '100%' : 220, minHeight: 220 }}>
-                  {item.img ? (
-                    <img src={item.img} alt={item.label} />
-                  ) : (
-                    <div className="w-full h-full flex items-center justify-center" style={{ background: '#0e0e0e', border: '1px solid #111' }}>
-                      <Icon name="Image" size={24} style={{ color: '#1a1a1a' }} />
-                    </div>
-                  )}
-                  <div className="gallery-overlay">
-                    <div>
-                      <p className="font-montserrat font-light text-[10px] tracking-[0.3em] uppercase" style={{ color: '#a8a8a8' }}>{item.label}</p>
-                      <p className="font-montserrat font-light text-[9px] tracking-widest uppercase mt-1" style={{ color: '#4a4a4a' }}>{item.sub}</p>
-                    </div>
+          <Reveal>
+            <div className="gallery-item" style={{ height: 420 }}>
+              <img src={HERO_IMAGE} alt="Scary Night" />
+              <div className="gallery-overlay" style={{ opacity: 1, background: 'linear-gradient(to top, rgba(8,8,8,0.92) 0%, transparent 60%)' }}>
+                <div className="flex items-end justify-between w-full">
+                  <div>
+                    <p className="font-cormorant font-light text-2xl" style={{ color: '#ebebeb', letterSpacing: '0.1em' }}>Scary Night</p>
+                    <p className="font-montserrat font-light text-[9px] tracking-[0.35em] uppercase mt-1" style={{ color: '#5a5a5a' }}>15 марта 2026</p>
                   </div>
+                  <a
+                    href={GALLERY_URL}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="font-montserrat font-light text-[10px] tracking-[0.25em] uppercase px-6 py-2.5 transition-all duration-300 flex items-center gap-2"
+                    style={{ border: '1px solid rgba(255,255,255,0.2)', color: '#a8a8a8' }}
+                    onMouseEnter={e => { (e.currentTarget as HTMLAnchorElement).style.borderColor = '#ebebeb'; (e.currentTarget as HTMLAnchorElement).style.color = '#ebebeb'; }}
+                    onMouseLeave={e => { (e.currentTarget as HTMLAnchorElement).style.borderColor = 'rgba(255,255,255,0.2)'; (e.currentTarget as HTMLAnchorElement).style.color = '#a8a8a8'; }}
+                  >
+                    <Icon name="Image" size={12} />
+                    Смотреть фото
+                  </a>
                 </div>
-              </Reveal>
-            ))}
-          </div>
+              </div>
+            </div>
+          </Reveal>
         </div>
       </section>
 

@@ -89,38 +89,45 @@ body::after {
   font-family: "Montserrat", sans-serif;
   font-weight: 300;
   font-size: 0.62rem;
-  letter-spacing: 0.3em;
+  letter-spacing: 0.28em;
   text-transform: uppercase;
-  color: var(--black);
-  background: var(--white);
-  padding: 13px 40px;
-  border: 1px solid var(--white);
-  transition: all 0.35s ease;
+  color: #080808;
+  background: #ebebeb;
+  padding: 15px 44px;
+  border: 1px solid #ebebeb;
+  transition:
+    background 0.4s ease,
+    color 0.4s ease,
+    box-shadow 0.4s ease;
   cursor: pointer;
   display: inline-block;
+  box-shadow: 0 4px 24px rgba(235, 235, 235, 0.1);
 }
 .btn-primary:hover {
   background: transparent;
-  color: var(--white);
+  color: #ebebeb;
+  box-shadow: none;
 }
 
 .btn-outline {
   font-family: "Montserrat", sans-serif;
   font-weight: 300;
   font-size: 0.62rem;
-  letter-spacing: 0.3em;
+  letter-spacing: 0.28em;
   text-transform: uppercase;
-  color: var(--silver);
+  color: #5a5a5a;
   background: transparent;
-  padding: 13px 40px;
-  border: 1px solid var(--dim);
-  transition: all 0.35s ease;
+  padding: 15px 44px;
+  border: 1px solid #252525;
+  transition:
+    border-color 0.4s ease,
+    color 0.4s ease;
   cursor: pointer;
   display: inline-block;
 }
 .btn-outline:hover {
-  border-color: rgba(255, 255, 255, 0.3);
-  color: var(--white);
+  border-color: rgba(235, 235, 235, 0.3);
+  color: #ebebeb;
 }
 
 /* EVENT CARD */
