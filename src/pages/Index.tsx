@@ -24,6 +24,46 @@ const EVENTS = [
     tag: 'PARTY',
     description: 'Японская эстетика встречает новосибирский андеграунд. Один вечер — одна атмосфера.',
   },
+  {
+    date: '14 ИЮНЯ',
+    year: '2025',
+    title: 'NIGHT MARKET',
+    venue: 'Лофт Парк Подземка',
+    city: 'Новосибирск',
+    time: '21:00',
+    tag: 'MARKET',
+    description: 'Ночной рынок под землёй. Музыка, еда, арт — всё в одном пространстве.',
+  },
+  {
+    date: '19 ИЮЛЯ',
+    year: '2025',
+    title: 'SUMMER UNDERGROUND',
+    venue: 'Лофт Парк Подземка',
+    city: 'Новосибирск',
+    time: '22:00',
+    tag: 'RAVE',
+    description: 'Жара снаружи, холод и бас внутри. Летний андеграунд в самом тёмном месте города.',
+  },
+  {
+    date: '23 АВГУСТА',
+    year: '2025',
+    title: 'BALENCI × ЗАКРЫТАЯ',
+    venue: 'Лофт Парк Подземка',
+    city: 'Новосибирск',
+    time: '23:30',
+    tag: 'CLOSED',
+    description: 'Закрытая вечеринка только по приглашениям. Список гостей ограничен.',
+  },
+  {
+    date: '27 СЕНТЯБРЯ',
+    year: '2025',
+    title: 'ОСЕННИЙ СЕЗОН',
+    venue: 'Лофт Парк Подземка',
+    city: 'Новосибирск',
+    time: '22:00',
+    tag: 'SEASON',
+    description: 'Открытие осеннего сезона BALENCI. Новые резиденты, новая атмосфера.',
+  },
 ];
 
 const GALLERY_ITEMS = [
@@ -262,7 +302,7 @@ export default function Index() {
                 <span style={{ color: '#ebebeb' }}>BALENCI</span> — организация мероприятий, которая работает там, где обычные event-команды не решаются. Подземные площадки, лофты, пространства с характером.
               </p>
               <p>
-                Новосибирск, с 2022 года. Более <span style={{ color: '#a8a8a8' }}>40 мероприятий</span> — каждое со своей историей.
+                Новосибирск, 2025 год. За полгода — <span style={{ color: '#a8a8a8' }}>5 мероприятий</span> и более 1500 участников.
               </p>
               <p className="italic">
                 Атмосфера важнее вместимости.
@@ -270,7 +310,7 @@ export default function Index() {
             </div>
 
             <div className="grid grid-cols-3 gap-8 mt-14 pt-10" style={{ borderTop: '1px solid #1a1a1a' }}>
-              {[{ num: '40+', label: 'Событий' }, { num: '12K+', label: 'Гостей' }, { num: '4', label: 'Года' }].map((s, i) => (
+              {[{ num: '5', label: 'Событий' }, { num: '1500+', label: 'Участников' }, { num: '6', label: 'Месяцев' }].map((s, i) => (
                 <div key={i}>
                   <p className="font-cormorant font-light text-4xl" style={{ color: '#ebebeb' }}>{s.num}</p>
                   <p className="font-montserrat font-light text-[10px] tracking-[0.3em] uppercase mt-2" style={{ color: '#3a3a3a' }}>{s.label}</p>
